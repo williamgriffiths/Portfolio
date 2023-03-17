@@ -4,7 +4,7 @@ downloadButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         let sourceCodePath;
         if (index === 0) {
-            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/blob/main/code/1.%20GUI%20Sorting%20Algorithms/GUI_Sorting_Algorithms.zip';
+            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/1.%20GUI%20Sorting%20Algorithms/GUI_Sorting_Algorithms.zip';
         } else if (index === 1) {
             sourceCodePath = 'Code/2. TVM Calculator/TVM.py';
         } else if (index === 2) {
