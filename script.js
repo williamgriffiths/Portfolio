@@ -6,9 +6,9 @@ downloadButtons.forEach((button, index) => {
         if (index === 0) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/1.%20GUI%20Sorting%20Algorithms/GUI_Sorting_Algorithms.zip';
         } else if (index === 1) {
-            sourceCodePath = 'Code/2. TVM Calculator/TVM.py';
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/2.%20TVM%20Calculator/TVM.py';
         } else if (index === 2) {
-            sourceCodePath = 'Code/3. Stock Portfolio Tracker/Portfolio Tracker.py';
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/3.%20Stock%20Portfolio%20Tracker/Portfolio%20Tracker.py';
         } else if (index === 3) {
             sourceCodePath = 'Code/4. NPV and IRR Calculator/NPV_IRR.py';
         } else if (index === 4) {
