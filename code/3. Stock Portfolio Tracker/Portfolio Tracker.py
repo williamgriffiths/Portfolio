@@ -5,6 +5,7 @@ import os
 import pandas as pd
 import numpy as np
 from datetime import datetime
+from pandas.tseries.offsets import BDay
 
 
 with open('api.txt', 'r') as file:
@@ -104,6 +105,15 @@ def add_stock(stock_data):
     shares = int(input("Enter the number of shares: "))
     purchase_date = input("Enter the purchase date (YYYY-MM-DD): ")
 
+    # Check if the purchase date is a business day and not in the future
+    purchase_date_obj = pd.Timestamp(purchase_date)
+    if not purchase_date_obj.isoweekday() in range(0, 5) or purchase_date_obj.date() > datetime.today().date():
+        next_business_day = purchase_date_obj + BDay(1)
+        while next_business_day.date() > datetime.today().date():
+            next_business_day -= BDay(1)
+        purchase_date = next_business_day.strftime("%Y-%m-%d")
+        print(f"Adjusted purchase date to next available trading day: {purchase_date}")
+
     # Check if the stock with the same purchase date already exists in the portfolio
     existing_stock = next((stock for stock in stock_data if stock['symbol'] == symbol and stock['purchase_date'] == purchase_date), None)
 
@@ -120,6 +130,7 @@ def add_stock(stock_data):
         }
         stock_data.append(new_stock)
         print(f"Added {symbol} to the portfolio.")
+
 
 
 def get_historical_stock_data(stock_data, start_date, end_date):
