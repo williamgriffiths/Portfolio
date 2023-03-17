@@ -7,11 +7,12 @@ import numpy as np
 from datetime import datetime
 
 
-# Replace 'YOUR_API_KEY' with your actual Alpha Vantage API key
-API_KEY = 'BD322KW8BMK3O790'
+with open('api.txt', 'r') as file:
+    API_KEY = file.read().strip()
+
 API_URL = 'https://www.alphavantage.co/query'
 
-PORTFOLIO_FILE = 'C:\\Users\\wgrif\\Desktop\\Website\\Code\\Stock Portfolio Tracker\\portfolio.txt'
+PORTFOLIO_FILE = 'C:\\Users\\wgrif\\Desktop\\Website\\Code\\3. Stock Portfolio Tracker\\portfolio.txt'
 
 
 def read_portfolio_from_file(filename=PORTFOLIO_FILE):
@@ -262,9 +263,10 @@ def main():
             print("Symbol | Purchase Price | Shares | Purchase Date | Current Price | Individual ROI")
             for stock in stock_data:
                 if 'individual_roi' in stock:
-                    print(f"{stock['symbol']} | {stock['purchase_price']} | {stock['shares']} | {stock['purchase_date']} | {stock['current_price']} | {stock['individual_roi']:.2f}%")
+                    print(f"{stock['symbol']} | ${stock['purchase_price']:.2f} | {stock['shares']} | {stock['purchase_date']} | ${stock['current_price']:.2f} | {stock['individual_roi']:.2f}%")
+
                 else:
-                    print(f"{stock['symbol']} | {stock['purchase_price']} | {stock['shares']} | {stock['purchase_date']} | Error fetching data")
+                    print(f"{stock['symbol']} | ${stock['purchase_price']:.2f} | {stock['shares']} | {stock['purchase_date']} | Error fetching data")
 
             print(f"\nTotal Investment: ${total_investment:.2f}")
             print(f"Total Value: ${total_value:.2f}")
