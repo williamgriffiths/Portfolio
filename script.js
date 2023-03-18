@@ -10,9 +10,9 @@ downloadButtons.forEach((button, index) => {
         } else if (index === 2) {
             sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/3.%20Stock%20Portfolio%20Tracker/Portfolio%20Tracker.py';
         } else if (index === 3) {
-            sourceCodePath = 'Code/4. NPV and IRR Calculator/NPV_IRR.py';
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/4.%20NPV%20and%20IRR%20Calculator/NPV_IRR.py';
         } else if (index === 4) {
-            sourceCodePath = 'Code/5. Sudoku/Sudoku Solver.py';
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/5.%20Sudoku/Sudoku%20Solver.py';
         } else {
             sourceCodePath = `path/to/project${index + 1}-source-code.zip`;
         }
