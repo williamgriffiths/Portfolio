@@ -19,84 +19,69 @@ def draw(nums,colour):
 
 def bubble_sort(nums):
     pygame.display.set_caption("Bubble Sort")
-    unsorted = True
-    while unsorted:
-
-        for i in range(len(nums)): 
-            for j in range(len(nums)-i-1):
-
-                if nums[j] > nums[j + 1]: 
-                    nums[j],nums[j+1] = nums[j+1],nums[j]
-
-                window.fill(black) 
-                draw(nums,red) 
-                pygame.time.delay(20) 
-                pygame.display.update()
+    
+    for i in range(len(nums)): 
+        for j in range(len(nums)-i-1):
+            if nums[j] > nums[j + 1]: 
+                nums[j],nums[j+1] = nums[j+1],nums[j]
                 
-        unsorted = False
-        
-        draw(nums,green)
-        pygame.display.update()
-        break
-
+            window.fill(black) 
+            draw(nums,red)
+            
+            pygame.time.delay(20) 
+            pygame.display.update()
+            
+    draw(nums,green)
+    pygame.display.update()
+    
     time.sleep(5)
     pygame.quit()
 
 
+
 def insertion_sort(nums):
     pygame.display.set_caption("Insertion Sort")
-    unsorted = True
-    while unsorted:
-
-        for i in range(len(nums)): 
-            for j in range(len(nums)-i): 
-
-                key = nums[j]
-                k = j-1
-                while k >= 0 and key < nums[k]:
-                    nums[k+1] = nums[k]
-                    k -= 1
-                nums[k+1] = key
-
-                window.fill(black) 
-                draw(nums,red) 
-                pygame.time.delay(20) 
-                pygame.display.update()
-                
-            unsorted = False
+    
+    for i in range(len(nums)): 
+        key = nums[i]
+        j = i-1
         
-            draw(nums,green)
-            pygame.display.update()
-            break
+        while j >= 0 and key < nums[j]:
+            nums[j+1] = nums[j]
+            j -= 1
+            
+        nums[j+1] = key
+        window.fill(black) 
+        draw(nums,red)
+        
+        pygame.time.delay(20) 
+        pygame.display.update()
+        
+    draw(nums,green)
+    pygame.display.update()
+    time.sleep(5)
+    pygame.quit()
 
-        time.sleep(5)
-        pygame.quit()
 
 
 def selection_sort(nums):
     pygame.display.set_caption("Selection Sort")
-    unsorted = True
-    while unsorted:
-
-        for i in range(len(nums)):
-            for j in range(len(nums)-i-1):
-
+    
+    for i in range(len(nums)):
+        minIndex = i
+        
+        for j in range(i+1, len(nums)):
+            if nums[minIndex] > nums[j]:
                 minIndex = j
-                for k in range(j+1,len(nums)):
-                    if nums[minIndex] > nums[k]:
-                        minIndex = k
-                nums[j],nums[minIndex] = nums[minIndex],nums[j]
-
-                window.fill(black) 
-                draw(nums,red) 
-                pygame.time.delay(25) 
-                pygame.display.update()
                 
-            unsorted = False
-            
-            draw(nums,green)
-            pygame.display.update()
-            break
-
-        time.sleep(5)
-        pygame.quit()
+        nums[i],nums[minIndex] = nums[minIndex],nums[i]
+        window.fill(black) 
+        draw(nums,red)
+        
+        pygame.time.delay(20) 
+        pygame.display.update()
+        
+    draw(nums,green)
+    pygame.display.update()
+    time.sleep(5)
+    pygame.quit()
