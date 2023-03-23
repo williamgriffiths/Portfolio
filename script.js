@@ -17,6 +17,10 @@ downloadButtons.forEach((button, index) => {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Engineering%201/auber-master.zip';
         } else if (index == 13) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Engineering%201/ENG1%20Writeup.pdf';
+        } else if (index == 14) {
+            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Intelligent%20Systems%202/INT2-sourcecode.zip';
+        } else if (index == 15) {
+            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Intelligent%20Systems%202/CIFAR-10%20Image%20Classification%20using%20PyTorch.pdf';
         } else {
             sourceCodePath = `path/to/project${index + 1}-source-code.zip`;
         }
