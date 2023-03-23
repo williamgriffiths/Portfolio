@@ -4,15 +4,17 @@ downloadButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         let sourceCodePath;
         if (index === 0) {
-            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/1.%20GUI%20Sorting%20Algorithms/GUISorts.zip';
+            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/CS/1.%20GUI%20Sorting%20Algorithms/GUISorts.zip';
         } else if (index === 3) {
-            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/2.%20TVM%20Calculator/TVM.py';
+            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/Finance/2.%20GUI%20TVM%20Calculator/gui-tvm.zip';
         } else if (index === 4) {
-            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/3.%20Stock%20Portfolio%20Tracker/Portfolio%20Tracker.py';
+            sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/Finance/3.%20Stock%20Portfolio%20Tracker/portfolio-tracker.zip';
         } else if (index === 5) {
-            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/4.%20NPV%20and%20IRR%20Calculator/NPV_IRR.py';
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Finance/4.%20NPV%20and%20IRR%20Calculator/NPV_IRR.py';
         } else if (index === 9) {
-            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/5.%20Sudoku/Sudoku%20Solver.py';
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/5.%20Sudoku/Sudoku%20Solver.py';
+        } else if (index === 9) {
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/6.%20Damien%20Hirst%20Spots/spots.py';
         } else if (index == 12) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Engineering%201/auber-master.zip';
         } else if (index == 13) {
