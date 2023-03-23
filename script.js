@@ -11,17 +11,17 @@ downloadButtons.forEach((button, index) => {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/code/Finance/3.%20Stock%20Portfolio%20Tracker/portfolio-tracker.zip';
         } else if (index === 5) {
             sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Finance/4.%20NPV%20and%20IRR%20Calculator/NPV_IRR.py';
-        } else if (index === 9) {
+        } else if (index === 6) {
             sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/5.%20Sudoku/Sudoku%20Solver.py';
-        } else if (index === 9) {
+        } else if (index === 7) {
             sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/6.%20Damien%20Hirst%20Spots/spots.py';
-        } else if (index == 12) {
+        } else if (index == 9) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Engineering%201/auber-master.zip';
-        } else if (index == 13) {
+        } else if (index == 10) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Engineering%201/ENG1%20Writeup.pdf';
-        } else if (index == 14) {
+        } else if (index == 11) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Intelligent%20Systems%202/INT2-sourcecode.zip';
-        } else if (index == 15) {
+        } else if (index == 12) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Intelligent%20Systems%202/CIFAR-10%20Image%20Classification%20using%20PyTorch.pdf';
         } else {
             sourceCodePath = `path/to/project${index + 1}-source-code.zip`;
