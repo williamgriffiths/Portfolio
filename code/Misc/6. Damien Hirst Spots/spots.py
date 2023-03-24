@@ -2,23 +2,6 @@ import random
 from PIL import Image, ImageDraw
 import math
 
-def get_color_exclude(exclude_colors, available_colors):
-    remaining_colors = []
-    for color in available_colors:
-        too_similar = False
-        for exclude_color in exclude_colors:
-            distance = math.sqrt(sum((a - b) ** 2 for a, b in zip(color, exclude_color)))
-            if distance < 70:
-                too_similar = True
-                break
-        if not too_similar:
-            remaining_colors.append(color)
-
-    if not remaining_colors:
-        remaining_colors = [color for color in available_colors if color not in exclude_colors]
-
-    color = random.choice(remaining_colors)
-    return color, remaining_colors
 
 def generate_spots_artwork(rows, columns, output_filename):
     spot_colors = [        (196, 2, 51), (239, 82, 159), (255, 200, 87), (0, 173, 239), (28, 172, 120),        (0, 104, 55), (0, 31, 63), (175, 111, 9), (48, 63, 159), (206, 17, 38),        (255,145,194), (255,118,37), (1,190,212), (47,225,229), (255,112,108),        (150,108,187), (210,240,249), (108,75,167), (138,188,247),   (254,135,0), (254,112,103)]
@@ -36,7 +19,7 @@ def generate_spots_artwork(rows, columns, output_filename):
             too_similar = False
             for exclude_color in exclude_colors:
                 distance = math.sqrt(sum((a - b) ** 2 for a, b in zip(color, exclude_color)))
-                if distance < 60:
+                if distance < 70:
                     too_similar = True
                     break
             if not too_similar:
@@ -82,7 +65,7 @@ if __name__ == '__main__':
     rows = 8
     columns = 10
     output_folder = r'C:\Users\wgrif\Desktop\Website\Code\Misc\6. Damien Hirst Spots\images3'
-    iterations = 50
+    iterations = 5
     successful_drawings = 0
 
     while successful_drawings < iterations:
