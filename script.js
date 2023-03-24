@@ -14,6 +14,8 @@ downloadButtons.forEach((button, index) => {
         } else if (index === 6) {
             sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/5.%20Sudoku/Sudoku%20Solver.py';
         } else if (index === 7) {
+            sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/5.%20Sudoku/Sudoku%20Solver.py';
+        } else if (index === 8) {
             sourceCodePath = 'https://raw.githubusercontent.com/williamgriffiths/portfolio/main/code/Misc/6.%20Damien%20Hirst%20Spots/spots.py';
         } else if (index == 9) {
             sourceCodePath = 'https://github.com/williamgriffiths/portfolio/raw/main/group-projects/Engineering%201/auber-master.zip';
