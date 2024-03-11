@@ -1,5 +1,3 @@
-Sure, here's a more detailed breakdown of the Financial News Sentiment Analysis project:
-
 1. Problem Definition: The aim is to analyze the sentiment of financial news articles and/or social media posts, and potentially correlate this sentiment with changes in the stock market.
 
 2. Data Collection: Gather a dataset of financial news articles or social media posts. This could involve web scraping (e.g., using BeautifulSoup or Scrapy in Python), or using existing financial news APIs (like GDELT, Reuters, or Bloomberg). Alternatively, for social media, Twitter provides APIs that allow for the collection of tweets on specific topics or hashtags.
